@@ -1,0 +1,45 @@
+
+.menu {
+    margin-bottom: 32px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+
+        font-size: 14px;
+        line-height: 1;
+        color: var(--color-999999);
+        &:last-child {
+            color: var(--color-7033AC);
+        }
+    }
+
+    &__link {
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+        @include statesHeaderLink();
+    }
+
+    &__delimiter {
+        margin-right: 3px;
+        margin-left: 3  px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .menu {
+        margin-bottom: 31px;
+
+    }
+}
+
+@media (max-width: 532px) {
+    .menu {
+      display: none;
+
+    }
+}

@@ -1,0 +1,35 @@
+@mixin fontStyle {
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@mixin psevdo {
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  background-color: var(--color-FFFFFF);
+}
+
+@mixin statesHeaderLink {
+  outline: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  
+  &:focus {
+      color: var(--color-7033AC);
+      background-color: var(--color-EBD1FF);
+  }
+
+  &:hover {
+      color: var(--color-A65CF0);
+      background-color: transparent;
+  }
+
+  &:active {
+      color: var(--color-7033AC);
+      background-color: transparent;
+  }  
+}

@@ -1,0 +1,175 @@
+@import '_mixins.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // font-size: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  /* min-width: -webkit-fill-available; */
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('../assets/fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../assets/fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: 400;
+    @include fontStyle();
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('../assets/fonts/OpenSans-SemiBold.woff2') format('woff2'),
+    url('../assets/fonts/OpenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    @include fontStyle();
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('../assets/fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../assets/fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: 700;
+    @include fontStyle();
+}
+
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../assets/fonts/PlayfairDisplay-Black.woff2') format('woff2'),
+    url('../assets/fonts/PlayfairDisplay-Black.woff') format('woff');
+    font-weight: 900;
+    @include fontStyle();
+}
+
+
+:root {
+  --color-FFFFFF: #fff;
+  --color-333333: #333333;
+  --color-F6F6F6: #f6f6f6;
+  --color-A65CF0: #a65cf0;
+  --color-FF862F: #ff862f;
+  --color-999999: #999;
+  --color-EBD1FF: #ebd1ff;
+  --color-A65CF0: #a65cf0;
+  --color-7033AC: #7033ac;
+  --color-C998FB: #C998FB;
+  --color-F7F7F7: #f7f7f7;
+  --color-FFBD59: #ffbd59;
+  --color-FFF5D1: #fff5d1;
+  --color-BB370E: #bb370e;
+  --color-F8EFFF: #F8EFFF;
+  --color-EAEAEA: #EAEAEA;
+  --color-666666: #666;
+  --color-D5B986: #d5b986;
+  
+
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: normal;
+  background-color: var(--color-FFFFFF);
+  color: var(--color-202020);
+}
+
+.lock {
+  overflow: hidden;
+}
+
+/* global */
+
+.visually-hidden {
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 0;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 45px;
+  max-width: 1370px;
+}
+
+.js-validate-error-label {
+  position: absolute;
+  order: 1;
+  top: -14px;
+  left: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+
+
+.flex {
+  display: flex;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    padding: 0 36px;
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    padding: 0 72px;
+    max-width: none;
+    min-width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 36px;
+    max-width: 640px;
+    min-width: 532px;
+  }
+}
+
+@media (max-width: 532px) {
+  // * {
+  //   border: 1px solid coral;
+  // }
+  .container {
+    padding: 0 12px;
+    min-width: 320px;
+    max-width: none;
+     width: 100%;
+  }
+}

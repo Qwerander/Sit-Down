@@ -1,0 +1,141 @@
+/* offer */
+
+
+.offer {
+    &__article {
+        padding-top: 160px;
+        padding-bottom: 150px;
+        background-image: url('../img/offer/offer-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 51px;
+        max-width: 508px;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 120%;
+        color: var(--color-FFFFFF);
+    }
+
+    &__span {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        // line-height: 120%; 
+        color: var(--color-D5B986);
+    }
+
+    &__btn {
+        padding: 20px 30px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        align-self: center;
+        color: var(--color-FFFFFF);
+        background-color: var(--color-A65CF0);
+        border-radius: 10px;
+        outline: none;
+        border: 2px solid transparent;
+        transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+        &:focus {
+            background-color: var(--color-C998FB);
+            border-color: var(--color-7033AC);
+        }
+
+        &:hover {
+            background-color: var(--color-C998FB);
+            border-color: transparent;
+        }
+
+        &:active {
+            background-color: var(--color-7033AC);
+            border-color: var(--color-7033AC);
+        }
+
+        &--mobile {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .offer {
+
+        &__article {
+
+            background-image: url('../img/offer/offer-background-1024.jpg');
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .offer {
+        &__container {
+            padding-left: 36px;
+        }
+
+        &__article {
+
+            background-image: url('../img/offer/offer-background-768.jpg');
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .offer {
+
+        &__article {
+
+            background-image: url('../img/offer/offer-background-320.jpg');
+        }
+
+
+        &__title {
+            font-size: 34px;
+        }
+
+        &__span {
+            font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: 532px) {
+    .offer {
+
+        &__container {
+            padding-left: 12px;
+        }
+
+        &__article {
+            padding-top: 38px;
+            padding-bottom: 61px;
+            margin-bottom: 32px;
+        }
+
+        &__btn {
+            display: none;
+
+            &--mobile {
+                display: block;
+                width: calc(100% - 24px);
+                margin: 0 auto;
+            }
+        }
+
+        &__title {
+            max-width: 187px;
+            font-size: 16px;
+            line-height: 120%;
+        }
+
+        &__span {
+            font-size: 24px;
+        }
+    }
+}

@@ -1,0 +1,242 @@
+.catalog-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__title {
+        margin-bottom: 24px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: var(--color-333333)
+    }
+
+    &__main {
+        margin-bottom: 32px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 32px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__card {
+        display: none;
+        position: relative;
+        padding: 60px 0 30px;
+        border-radius: 10px;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: var(--color-F7F7F7);
+
+        &--display {
+            display: flex;
+        }
+    }
+
+    &__star {
+        position: absolute;
+        left: 30px;
+        top: 33px;
+    }
+
+    &__picture {
+        align-self: center;
+        padding-bottom: 14px;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+
+    }
+
+    &__subtitle {
+        margin-bottom: 22px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: var(--color-333333);
+    }
+
+    &__price {
+        margin-bottom: 24px;
+        font-size: 16px;
+        line-height: 130%;
+        color: var(--color-666666)
+    }
+
+    &__btn {
+        display: inline-block;
+        align-self: flex-start;
+        padding: 17px 34px;
+        border-radius: 10px;
+        border: 2px solid var(--color-A65CF0);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        color: var(--color-A65CF0);
+        outline: none;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+        &:focus {
+            background-color: var(--color-C998FB);
+            color: var(--color-FFFFFF);
+            border-color: var(--color-A65CF0);
+        }
+
+        &:hover {
+            background-color: var(--color-A65CF0);
+            color: var(--color-FFFFFF);
+            border-color: transparent;
+        }
+
+        &:active {
+            background-color: var(--color-7033AC);
+            color: var(--color-FFFFFF);
+            border-color: transparent;
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--mobile {
+            display: none;
+        }
+    }
+
+    &__bulet {
+        display: flex;
+        justify-content: center;
+        margin-right: 16px;
+        align-items: center;
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: var(--color-A65CF0);
+        background-color: var(--color-FFFFFF);
+        border: 1px solid var(--color-A65CF0);
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--active {
+            border: 1px solid var(--color-7033AC);
+            background-color: var(--color-7033AC);
+            color: var(--color-FFFFFF);
+        }
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .catalog-content {
+
+
+        &__card {
+            padding-top: 60px;
+        }
+
+        &__title {
+            display: none;
+        }
+
+    }
+}
+
+@media (max-width: 1023px) {
+    .catalog-content {
+
+        &__main {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        &__pagination {
+            display: none;
+
+            &--mobile {
+                display: flex;
+            }
+        }
+
+        &__card {
+            padding-top: 65px;
+
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+    .catalog-content {
+
+        &__block {
+            padding: 0 16px;
+        }
+
+        &__picture {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+}
+
+
+
+@media (max-width: 532px) {
+    .catalog-content {
+
+        &__title {
+            margin: 0;
+            font-size: 24px;
+            line-height: 100%;
+        }
+
+        &__main {
+            grid-row-gap: 16px;
+            grid-column-gap: 16px;
+        }
+
+        &__subtitle {
+            margin: 0;
+            margin-bottom: 16px;
+            font-size: 16px;
+            line-height: 130%;
+        }
+
+        &__btn {
+            padding: 10px 23px;
+        }
+
+        &__card {
+            padding-top: 36px;
+            padding-bottom: 16px;
+        }
+
+        &__price {
+            margin-bottom: 17px;
+        }
+
+        &__star {
+            svg {
+                width: 13px;
+                height: 12px;
+            }
+
+            left: 16px;
+            top: 16px;
+            font-size: 13px;
+            line-height: 130%;
+        }
+
+        &__content {
+            margin-bottom: 30px;
+        }
+    }
+}

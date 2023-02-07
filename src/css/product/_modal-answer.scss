@@ -1,0 +1,111 @@
+.modal-answer {
+
+    position: fixed;
+    padding: 15px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .7);
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    
+
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__container {
+       
+        padding: 20px;
+        max-width: 624px;
+        min-height: 421px;
+        border-radius: 10px;
+        background-color: var(--color-FFFFFF);
+        position: relative;
+        margin: 100px auto 0;
+        cursor: default;
+        z-index: 10000;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        padding-top: 98px;
+        min-height: 100%;
+        margin: auto 0;
+    }
+
+    &__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 22px;
+            height: 0;
+            top: 47%;
+            transform: translateX(-50%) rotate(45deg);
+            border-bottom: 3px solid var(--color-333333);
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 22px;
+            height: 0;
+            top: 47%;
+            transform: translateX(-50%) rotate(-45deg);
+            border-bottom: 3px solid var(--color-333333);
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        &:focus,
+        &:focus &::before,
+        &:focus &::after {
+            border-color: var(--color-999999);
+        }
+
+        &:hover,
+        &:hover &::before,
+        &:hover &::after {
+            border-color: var(--color-666666);
+        }
+
+        &:active,
+        &:active &::before,
+        &:active &::after {
+            border-color: var(--color-000000);
+        }
+    }
+
+
+    &__logo {
+        width: 172px;
+        height: 117px;
+        margin-bottom: 32px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 100%;  
+        color: var(--color-333333)
+    }
+}
+.brake-mobile {
+    display: none;
+}

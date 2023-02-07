@@ -1,0 +1,39 @@
+{
+  "name": "sit-dwn-pls",
+  "version": "1.0.0",
+  "description": "advanced-diplom-work",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp --build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Denisenkov-Anton",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "browser-sync": "^2.27.11",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-notify": "^4.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemap": "^1.0.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.1",
+    "gulp-uglify-es": "^3.0.0",
+    "node-sass": "^8.0.0",
+    "sass": "^1.57.1",
+    "yargs": "^17.6.2"
+  }
+}

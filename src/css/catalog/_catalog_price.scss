@@ -1,0 +1,42 @@
+
+.catalog-price {
+
+    &__wrapper {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+    }   
+    &__label {
+    }
+    &__text {
+        margin-right: 6px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%; 
+        color: var(--color-666666);
+    }
+    &__input {
+        padding: 4px 1px 3px 13px;
+        border: 1px solid var(--color-999999);
+        border-radius: 2px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%; 
+        color: var(--color-666666);
+        outline: none;
+    }
+    &__element {
+    }
+}
+
+@media (max-width: 1300px) {
+    .catalog-price {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__label:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+}

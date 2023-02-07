@@ -1,0 +1,241 @@
+
+/* rating */
+
+.rating {
+  padding-top: 70px;
+  padding-bottom: 69px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 26px;
+    align-self: flex-start;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: var(--color-333333);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 32px;
+    grid-column-gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  &__card {
+    position: relative;
+    padding: 60px 0 30px;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--color-F7F7F7);
+    &--active {
+      display: flex;
+    }
+  }
+
+  &__star {
+    position: absolute;
+    left: 30px;
+    top: 33px;
+  }
+
+  &__picture {
+    align-self: center;
+    padding-bottom: 14px;
+  }
+
+  //   &__img {
+  //   }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 22px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--color-333333);
+  }
+
+  &__price {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-666666)
+  }
+
+  &__btn {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 17px 34px;
+    border-radius: 10px;
+    border: 2px solid var(--color-A65CF0);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--color-A65CF0);
+    outline: none;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:focus {
+      background-color: var(--color-C998FB);
+      color: var(--color-FFFFFF);
+      border-color: var(--color-A65CF0);
+    }
+
+    &:hover {
+      background-color: var(--color-A65CF0);
+      color: var(--color-FFFFFF);
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: var(--color-7033AC);
+      color: var(--color-FFFFFF);
+      border-color: transparent;
+    }
+  }
+
+  &__more {
+    padding: 20px 35px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    align-self: center;
+    color: var(--color-FFFFFF);
+    background-color: var(--color-A65CF0);
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    &--nomore {
+      display: none;
+    }
+
+    &:focus {
+      background-color: var(--color-C998FB);
+      border-color: var(--color-7033AC);
+    }
+
+    &:hover {
+      background-color: var(--color-C998FB);
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: var(--color-7033AC);
+      border-color: var(--color-7033AC);
+    }
+  }
+
+}
+
+
+@media (max-width: 1300px) {
+  .rating {
+
+    &__content {
+      grid-template-columns: 1fr 1fr 1fr;
+      // grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    &__card {
+      padding-top: 65px;
+
+      // &:nth-last-child(-n + 2) {
+      //   display: none;
+      // }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .rating {
+
+    &__content {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .rating {
+
+    &__block {
+      padding: 0 16px;
+    }
+
+    &__picture {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+
+@media (max-width: 532px) {
+  .rating {
+
+    &__title {
+      font-size: 24px;
+      line-height: 100%;
+    }
+
+    &__content {
+      grid-row-gap: 16px;
+      grid-column-gap: 16px;
+    }
+
+    &__subtitle {
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    &__btn {
+      padding: 10px 23px;
+    }
+
+    &__card {
+      padding-top: 36px;
+      padding-bottom: 16px;
+    }
+
+    &__price {
+      margin-bottom: 17px;
+    }
+
+    &__star {
+      svg{
+        width: 13px;
+        height: 12px;
+      }
+      left: 16px;
+      top: 16px;
+      font-size: 13px;
+      line-height: 130%;
+    }
+
+    &__content {
+      margin-bottom: 30px;  
+    }
+  }
+}

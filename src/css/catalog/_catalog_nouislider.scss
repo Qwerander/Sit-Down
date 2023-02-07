@@ -1,0 +1,84 @@
+
+.catalog-price__element.noUi-horizontal {
+    height: 3px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: unset;
+}
+
+.noUi-base, 
+.noUi-connects {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.noUi-connects {
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+// .noUi-connects {
+// }
+
+.noUi-horizontal {
+    height: 0;
+}
+.noUi-origin {
+    height: 10%;
+    width: 10%;
+}
+
+.noUi-connect {
+    background-color: var(--color-A65CF0);
+}
+.noUi-connect, .noUi-origin {
+    will-change: transform;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform-style: preserve-3d;
+    transform-origin: 0 0;
+    transform-style: flat;
+}
+
+.catalog-price__element .noUi-handle {
+    right: -9px;
+    top: -8px;
+    border: 8px solid transparent;
+    border-bottom: 12px solid var(--color-A65CF0);
+    border-radius: 3px;
+    width: 13px;
+    height: 13px;
+    box-shadow: unset;
+    background-color: transparent;
+    transition: border-color 0.3s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    &:focus {
+        border-bottom-color: var(--color-7033AC) ;
+    }
+
+    &:hover {
+        border-bottom-color: var(--color-C998FB) ;
+    }
+    
+    &:active {
+        border-bottom-color: var(--color-7033AC) ;
+    }
+
+}
+
+.noUi-touch-area {
+    height: 100%;
+    width: 100%;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+    display: none;
+}
