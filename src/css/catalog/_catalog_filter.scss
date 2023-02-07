@@ -92,7 +92,6 @@
         margin-bottom: 41px;
 
         &__subtitle {
-            margin: 0;
             display: none;
 
             &--mobile {
@@ -107,7 +106,7 @@
         }
 
         &__props {
-            margin: 0;
+            margin-bottom: 0;
             position: absolute;
             padding: 9px 15px;
             font-weight: 400;

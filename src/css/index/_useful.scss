@@ -1,17 +1,21 @@
 /* useful */
 
+
+
+
+
+
 .useful {
     padding-top: 70px;
     padding-bottom: 70px;
     
     &__top {
         display: flex;
-        margin-bottom: 26px;
         justify-content: space-between;
     }
 
     &__title {
-        margin: 0;
+        margin-bottom: 26px;
         font-weight: 400;
         font-size: 32px;
         line-height: 100%;
@@ -110,10 +114,34 @@
         height: 100%;
     }
 
-    &__card { 
+    &__card {
+        padding-top: 426px;
         background: var(--color-F7F7F7);
         border-radius: 10px;
         width: calc((100% - 32px) / 2);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+
+        &--card1 {
+            background-image: url('../img/useful/useful-card-1.jpg');
+        }
+
+        &--card2 {
+            background-image: url('../img/useful/useful-card-2.jpg');
+        }
+
+        &--card3 {
+            background-image: url('../img/useful/useful-card-3.jpg');
+        }
+
+        &--card4 {
+            background-image: url('../img/useful/useful-card-4.jpg');
+        }
+
+        &--card5 {
+            background-image: url('../img/useful/useful-card-5.jpg');
+        }
     }
 
     &__block {
@@ -169,7 +197,9 @@
 @media (max-width: 1300px) {
     .useful {
         
+
         &__card {
+            padding-top: 206px;
             width: calc((100% - 64px) / 3);
  
         }
@@ -180,7 +210,6 @@
         }
 
         &__text {
-            margin: 0;
             font-size: 16px;
             line-height: 22px;
         }
@@ -192,15 +221,31 @@
         
 
         &__card {
+            // padding-top: 206px;
             width: calc((100% - 32px) / 2);
  
         }
+
+        // &__block {
+        //     padding-top: 26px;
+        //     padding-right: 38px;
+        // }
+
+        // &__text {
+        //     font-size: 16px;
+        //     line-height: 22px;
+        // }
     }
 }
 
 @media (max-width: 767px) {
     .useful {
         
+
+        &__card {
+            background-size: 100% 206px;
+        }
+
         &__btns {
             text-align: center;
         }
@@ -214,7 +259,6 @@
 @media (max-width: 532px) {
     .useful {
         padding-top: 77px;
-        margin: 0;
         &__title {
             font-size: 24px;
         }

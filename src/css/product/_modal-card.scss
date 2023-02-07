@@ -187,7 +187,6 @@
 
     &__bottom {
         display: flex;
-        width: 100%;
         // flex-direction: column;
         position: relative;
         overflow: hidden;
@@ -279,16 +278,9 @@
     //     }
     // }
 
-    &__main-swiper {
-        width: 100%;
-        overflow: hidden
-    }
-
 
     &__nav-swiper {
         display: flex;
-        width: 100%;
-        overflow: hidden;
     }
 
     &__item {

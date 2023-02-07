@@ -1,3 +1,28 @@
+:root {
+    --color-FFFFFF: #fff;
+    --color-333333: #333333;
+    --color-F6F6F6: #f6f6f6;
+    --color-A65CF0: #a65cf0;
+    --color-FF862F: #ff862f;
+    --color-999999: #999;
+    --color-EBD1FF: #ebd1ff;
+    --color-A65CF0: #a65cf0;
+    --color-7033AC: #7033ac;
+    --color-C998FB: #C998FB;
+    --color-F7F7F7: #f7f7f7;
+    --color-FFBD59: #ffbd59;
+    --color-FFF5D1: #fff5d1;
+    --color-BB370E: #bb370e;
+    --color-F8EFFF: #F8EFFF;
+    --color-EAEAEA: #EAEAEA;
+    --color-666666: #666;
+    --color-D5B986: #d5b986;
+
+
+}
+
+
+
 .catalog-content {
     display: flex;
     flex-direction: column;
@@ -46,6 +71,8 @@
         padding-bottom: 14px;
     }
 
+    //   &__img {
+    //   }
     &__block {
         display: flex;
         flex-direction: column;
@@ -131,6 +158,9 @@
             color: var(--color-FFFFFF);
         }
     }
+
+
+
 }
 
 
@@ -140,12 +170,21 @@
 
         &__card {
             padding-top: 60px;
+      
+            // &:nth-last-child(-n + 2) {
+            //   display: none;
+            // }
+          }
+
+          &__title {
+          display: none;
         }
 
-        &__title {
-            display: none;
-        }
 
+        // &__card {
+        //   padding-top: 65px;
+
+        // }
     }
 }
 
@@ -157,6 +196,13 @@
             grid-template-rows: 1fr 1fr 1fr;
         }
 
+        //     &__content {
+        //       grid-template-columns: 1fr 1fr;
+        //       grid-template-rows: 1fr 1fr 1fr;
+        //     }
+
+        //   }
+        // }
         &__pagination {
             display: none;
 
@@ -167,11 +213,18 @@
 
         &__card {
             padding-top: 65px;
+      
+            // &:nth-last-child(-n + 2) {
+            //   display: none;
+            // }
+          }
+        // @media (max-width: 1024px) {
+        //   .catalog-content {}
+        // }
 
-        }
     }
-
 }
+
 
 @media (max-width: 767px) {
     .catalog-content {
@@ -187,56 +240,100 @@
     }
 }
 
+// @media (max-width: 532px) {
+//   .catalog-content {
 
+//     &__title {
+//       font-size: 24px;
+//       line-height: 100%;
+//     }
+
+//     &__content {
+//       grid-row-gap: 16px;
+//       grid-column-gap: 16px;
+//     }
+
+//     &__subtitle {
+//       margin-bottom: 16px;
+//       font-size: 16px;
+//       line-height: 130%;
+//     }
+
+//     &__btn {
+//       padding: 10px 23px;
+//     }
+
+//     &__card {
+//       padding-top: 36px;
+//       padding-bottom: 16px;
+//     }
+
+//     &__price {
+//       margin-bottom: 17px;
+//     }
+
+//     &__star {
+//       svg{
+//         width: 13px;
+//         height: 12px;
+//       }
+//       left: 16px;
+//       top: 16px;
+//       font-size: 13px;
+//       line-height: 130%;
+//     }
+
+//     &__content {
+//       margin-bottom: 30px;  
+//     }
+//   }
+// }
 
 @media (max-width: 532px) {
     .catalog-content {
-
-        &__title {
-            margin: 0;
-            font-size: 24px;
-            line-height: 100%;
+  
+      &__title {
+        font-size: 24px;
+        line-height: 100%;
+      }
+  
+      &__main {
+        grid-row-gap: 16px;
+        grid-column-gap: 16px;
+      }
+  
+      &__subtitle {
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 130%;
+      }
+  
+      &__btn {
+        padding: 10px 23px;
+      }
+  
+      &__card {
+        padding-top: 36px;
+        padding-bottom: 16px;
+      }
+  
+      &__price {
+        margin-bottom: 17px;
+      }
+  
+      &__star {
+        svg{
+          width: 13px;
+          height: 12px;
         }
-
-        &__main {
-            grid-row-gap: 16px;
-            grid-column-gap: 16px;
-        }
-
-        &__subtitle {
-            margin: 0;
-            margin-bottom: 16px;
-            font-size: 16px;
-            line-height: 130%;
-        }
-
-        &__btn {
-            padding: 10px 23px;
-        }
-
-        &__card {
-            padding-top: 36px;
-            padding-bottom: 16px;
-        }
-
-        &__price {
-            margin-bottom: 17px;
-        }
-
-        &__star {
-            svg {
-                width: 13px;
-                height: 12px;
-            }
-
-            left: 16px;
-            top: 16px;
-            font-size: 13px;
-            line-height: 130%;
-        }
-
-        &__content {
-            margin-bottom: 30px;
-        }
+        left: 16px;
+        top: 16px;
+        font-size: 13px;
+        line-height: 130%;
+      }
+  
+      &__content {
+        margin-bottom: 30px;  
+      }
     }
-}
+  }

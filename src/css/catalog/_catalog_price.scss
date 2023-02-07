@@ -28,15 +28,3 @@
     &__element {
     }
 }
-
-@media (max-width: 1300px) {
-    .catalog-price {
-        &__wrapper {
-            flex-direction: column;
-        }
-
-        &__label:not(:last-child) {
-            margin-bottom: 4px;
-        }
-    }
-}
